@@ -10,7 +10,7 @@ asset:
 
 fetchDep:
 	go get -v golang.org/x/mobile/cmd/...
-	mkdir -p $(shell go env GOPATH)/src/v2ray.com/core
+	mkdir -p $(shell go env GOPATH)/src/github.com/XTLS/Xray-core/core
 	git clone https://github.com/XTLS/Xray-core.git $(shell go env GOPATH)/src/v2ray.com/core
 	go get -d github.com/eroxs/AndroidLibXraylite
 
