@@ -18,7 +18,7 @@ import (
 )
 
 type protectSet interface {
-	Protect(int) int
+	Protect(int) bool
 }
 
 type resolved struct {
