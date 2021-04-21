@@ -191,6 +191,11 @@ func (d *ProtectedDialer) getFd(network v2net.Network) (fd int, err error) {
 	return
 }
 
+// Init implement internet.SystemDialer
+func (d *ProtectedDialer) Init(_ dns.Client, _ outbound.Manager) {
+	// do nothing
+}
+
 // Dial exported as the protected dial method
 func (d *ProtectedDialer) Dial(ctx context.Context,
 	src v2net.Address, dest v2net.Destination, sockopt *v2internet.SocketConfig) (net.Conn, error) {
